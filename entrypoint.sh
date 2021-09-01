@@ -1,9 +1,8 @@
 #!/bin/sh -l
 #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 pip install -r requirements.txt
-export -p
-#python main_skype.py --login_name="${{ secrets.SKYPE_USERNAME }}" --login_password="${{ secrets.SKYPE_PASSWORD }}" --skype_ids="19:d32d3d93d57740308986b42ec36e5525@thread.skype" send_msg
-#if true ; then
-#  echo "Game over!"
-#  exit 1
-#fi
+python  main_skype.py   --login_name=           "$INPUT_SKYPE_USERNAME" \
+                        --login_password=       "$INPUT_SKYPE_PASSWORD"\
+                        --skype_ids=            "$INPUT_SKYPE_IDS"\
+                        --send_msg_path=        "$INPUT_SEND_MSG_PATH"\
+                        --send_file_path=       "$INPUT_SEND_FILE_PATH"

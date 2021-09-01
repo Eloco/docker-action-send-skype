@@ -15,7 +15,8 @@ jobs:
       - name: test Eloco/docker-action-send-skype
         uses: ./
         with:
-            skype_username : abc
-            skype_password : cde
-            skype_ids      : ffe
-
+            skype_username : ${{ secrets.SKYPE_USERNAME }}
+            skype_password : ${{ secrets.SKYPE_PASSWORD }}
+            skype_ids      : 19:d32d3d93d57740308986b42ec36e5525@thread.skype
+            send_msg_path  : README.md
+            send_file_path : README.md

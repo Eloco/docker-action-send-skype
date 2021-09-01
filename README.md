@@ -6,36 +6,9 @@
 
 This action that simply sends file/message to multiple skype_ids(chat_group_id or user_id).
 
-## inputs:
-  skype_username:
-    description: 'the email address which u input to log in'
-    required: true
-    default: 'eloco@outlook.com'
-  skype_password:
-    description: 'passwd'
-    required: true
-    default: 'qwert'
-  skype_ids:
-    description: 'input both user_id or group_id in skype, also support multiple id which connect by space'
-    required: true
-    default: '19:655268b00f704dfc8e71592f93d73bd3@thread.skype 19:06edc5b67f4a48eda7bfdff034918978@thread.skype'
-  send_msg_path:
-    description: 'send all the message in the path [support both folder and file, not support sub-folder]'
-    required: false
-    default: 'message.txt'
-  send_file_path:
-    description: 'send all the file in the path [support both folder and file, not support sub-folder]'
-    required: false
-    default: './download/'
-
-## outputs:
-```yaml
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
-```
-
 ## Usage
+
+See [action.yml](action.yml)
 
 Basic:
 ```yaml

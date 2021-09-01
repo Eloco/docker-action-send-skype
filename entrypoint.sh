@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "hello $1"
+echo "hello $1 $GITHUB_WORKSPACE"
 pip -V
 python -V
 

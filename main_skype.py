@@ -41,7 +41,6 @@ def skype_activate_send():
 
     def send_file(ch,file_path):
         file_name=os.path.basename(file_path)
-        if message!=None:ch.sendMsg(emoji.emojize(message))
         is_image=True if re.match( r'.*\.(jpg|bmp|gif|ico|pcx|jpeg|tif|png|raw|tga)$', file_name, re.M|re.I) else False
         ch.sendFile(open(file_path, "rb"), file_name,image=is_image) 
 

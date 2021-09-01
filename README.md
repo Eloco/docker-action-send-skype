@@ -4,7 +4,7 @@
   <a href="https://github.com/Eloco/docker-action-send-skype"><img alt="GitHub Actions status" src="https://github.com/actions/setup-dotnet/workflows/Main%20workflow/badge.svg"></a>
 </p>
 
-This action that simply sends file/message to multiple skype_ids( both chat_group_id and user_id ).
+This action that simply sends file/message to multiple skype_ids( both group_id and user_id ).
 - message support [emoji](https://carpedm20.github.io/emoji/)
 
 ## Usage

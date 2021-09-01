@@ -1,5 +1,5 @@
 #!/bin/sh -l
-#if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+wget -O action_main.py      https://raw.githubusercontent.com/Eloco/docker-action-send-skype/main/action_main.py
+wget -O requirements.txt    https://raw.githubusercontent.com/Eloco/docker-action-send-skype/main/requirements.py
 pip install -r requirements.txt
-ls
 python action_main.py 

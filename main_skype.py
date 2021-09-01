@@ -7,7 +7,6 @@ import skpy
 import time
 import sys
 
-
 """
 Eloco
 """
@@ -28,6 +27,7 @@ def skype_activate_send():
     """
     [init] env
     """
+    print(os.environ.get('INPUT_SKYPE_USERNAME'))
     sk                  =connect_skype(user=os.environ.get('INPUT_SKYPE_USERNAME'),pwd=os.environ.get('INPUT_SKYPE_PASSWORD'))
     skype_ids           =os.environ.get('INPUT_SKYPE_IDS')
     send_msg_path       =os.environ.get('GITHUB_WORKSPACE')+"/"+os.environ.get('INPUT_SEND_MSG_PATH')

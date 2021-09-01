@@ -14,7 +14,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 - name: Send skype
-  uses: Eloco/docker-action-send-skype@v1
+  uses: Eloco/docker-action-send-skype@v2
   with:
     # Required skype username:
     skype_username : ${{ secrets.SKYPE_USERNAME }}

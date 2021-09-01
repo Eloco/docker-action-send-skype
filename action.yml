@@ -1,4 +1,4 @@
-name: Send Skype
+name: docker-action-send-skype
 description: Send messages and files to multiple skype_id(user and group)
 author: Eloco
 inputs:

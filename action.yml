@@ -1,12 +1,39 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: Send Skype
+description: Send messages and files to multiple skype_id(user and group)
+author: Eloco
+inputs:
+  skype_username:
+    description: 'the email address which u input to log in'
+    required: true
+    default: 'eloco@outlook.com'
+  skype_password:
+    description: 'passwd'
+    required: true
+    default: 'qwert'
+  skype_ids:
+    description: 'input both user_id or group_id in skype, also support multiple id which connect by space'
+    required: true
+    default: '19:655268b00f704dfc8e71592f93d73bd3@thread.skype 19:06edc5b67f4a48eda7bfdff034918978@thread.skype'
+  send_msg_path:
+    description: 'send all the message in the path [support both folder and file, not support sub-folder]'
+    required: false
+    default: 'message.txt'
+  send_file_path:
+    description: 'send all the file in the path [support both folder and file, not support sub-folder]'
+    required: false
+    default: './download/'
+
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.skype_username }}
+    - ${{ inputs.skype_password }}
+    - ${{ inputs.skype_ids }}
+    - ${{ inputs.send_msg_path }}
+    - ${{ inputs.send_file_path }}

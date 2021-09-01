@@ -1,0 +1,21 @@
+name: 'test Eloco/docker-action-send-skype'
+
+on:
+    #schedule:
+    #  - cron:  '*/8 * * * *'
+  push:
+  pull_request:
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: test Eloco/docker-action-send-skype
+        uses: ./
+        with:
+            skype_username : abc
+            skype_password : cde
+            skype_ids      : ffe
+

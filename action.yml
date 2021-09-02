@@ -1,6 +1,9 @@
 name: docker-action-send-skype
 description: Send messages and files to multiple skype_id(user and group)
 author: Eloco
+branding:
+  icon: 'share-2'  
+  color: 'green'
 inputs:
   skype_username:
     description: 'the email address which u input to log in'

@@ -3,8 +3,8 @@ name: 'test Eloco/docker-action-send-skype'
 on:
     #schedule:
     #  - cron:  '*/8 * * * *'
-  push:
-  pull_request:
+    #push:
+    #pull_request:
 
 jobs:
   bot:
